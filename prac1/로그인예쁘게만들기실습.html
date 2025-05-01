@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/5c648e89f6.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f0f0f0;
+        }
+
+        .wrap {
+            width: 750px;
+            height: 500px;
+
+            border-radius: 20px;
+
+            margin: 70px auto;
+            padding: 30px;
+            box-sizing: border-box;
+
+            background-color: white;
+        }
+
+        h2 {
+            padding: 20px;
+            color: orange;
+        }
+
+        .login-wrap {
+            display: flex;
+            flex-direction: row;
+
+            height: 350px;
+        }
+
+        .login {
+            height: 400px;
+
+            flex: 1;
+            border-right: 0.1px solid rgb(168, 168, 168);
+
+            display: flex;
+            flex-direction: column;
+            /*justify-content: space-around;*/
+        }
+
+        .field {
+            height: 60px;
+            margin: 30px;
+            display: flex;
+            flex-direction: column;
+
+            box-sizing: border-box;
+        }
+
+        label {
+            padding: 10px;
+            font-size: 17px;
+            font-weight: bolder;
+        }
+
+        input {
+            height: 50px;
+            padding: 15px;
+            border: 0.5px solid gray;
+            border-radius: 50px;
+        }
+
+        button {
+            height: 50px;
+            padding: 15px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 50px;
+
+            background-color: orange;
+            color: white;
+            font-size: 17px;
+            font-weight: bolder;
+
+
+        }
+
+        .sns-login {
+            flex: 1;
+            height: 400px;
+            box-sizing: border-box;
+
+            display: flex;
+            flex-direction: column;
+
+            padding: 50px 0px;
+            justify-content: space-between;
+
+        }
+
+        .sns-btn {
+            height: 50px;
+            margin: 20px;
+            padding: 10px;
+
+            box-sizing: border-box;
+
+            border-radius: 50px;
+            display: flex;
+        }
+
+        .sns-img {
+            width: 40px;
+            margin: 0px 15px;
+
+            box-sizing: border-box;
+        }
+
+        .sns-p {
+            padding-left: 15px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .naver p {
+            color: white;
+        }
+
+        .facebook p {
+            color: white;
+        }
+
+        .google {
+            background-color: white;
+            border: 0.1px solid rgb(168, 168, 168);
+        }
+
+        .naver {
+            background-color: #03c75a;
+
+        }
+
+        .facebook {
+            background-color: #1674ea;
+        }
+
+        /*
+            모바일구간
+            1. sns로그인 너비 40px
+            2. .sns-login 높이 줄이기
+            3. .login-wrap flex-direction 
+        */
+
+        @media(max-width:768px) {
+
+            .wrap {
+                width: 90%;
+                
+                
+            }
+            .login{
+                border: none;
+            }
+
+            .login-wrap {
+                flex-direction: column;
+            }
+            .sns-login{
+                flex-direction:row;
+                justify-content: none;
+            }
+
+            .sns-btn{
+                width: 50px;
+            }
+            .sns-p{
+                display: none;
+                padding: 10px;
+            }
+            .sns-img{
+                
+                margin: 0px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="wrap">
+        <h2>Log-in</h2>
+        <div class="login-wrap">
+            <div class="login">
+                <div class="field">
+                    <label>id</label>
+                    <input type="text">
+                </div>
+
+                <div class="field">
+                    <label>pw</label>
+                    <input type="password">
+                </div>
+
+                <div class="field btn">
+                    <button>login</button>
+                </div>
+
+
+
+            </div>
+            <div class="sns-login">
+                <div class="sns-btn naver">
+                    <div class="sns-img">
+                        <i class="fa-sharp fa-solid fa-n" style="font-size:18px; color: white"></i>
+                    </div>
+                    <div class="sns-p">
+                        <p>네이버로 로그인</p>
+                    </div>
+                </div>
+                <div class="sns-btn google">
+                    <div class="sns-img">
+                        <img style="width:25px; height:25px "
+                            src="https://www.gstatic.com/marketing-cms/assets/images/bc/1a/a310779347afa1927672dc66a98d/g.png=s48-fcrop64=1,00000000ffffffff-rw"
+                            alt="img">
+                    </div>
+                    <div class="sns-p">
+                        <p>google로 로그인</p>
+                    </div>
+                </div>
+                <div class="sns-btn facebook">
+                    <div class="sns-img">
+                        <i class="fa-brands fa-facebook" style="font-size:18px; color: white"></i>
+                    </div>
+                    <div class="sns-p">
+                        <p>facebook로 로그인</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .login-wrap {
+            width: 600px;
+            border: 1px solid black;
+            padding: 30px;
+            box-sizing: border-box;
+            border-radius: 5px;
+
+            margin: 0 auto;
+        }
+
+        .login-wrap>h2 {
+            text-transform: capitalize;
+            /*첫글자대문자로변환*/
+
+        }
+
+        .sns-login {
+            display: flex;
+        }
+
+        .sns-login>button {
+            flex: 1;
+            border: none;
+            text-transform: capitalize;
+        }
+
+        .naver {
+            background-color: green;
+        }  
+
+        .kakao {
+            background-color: yellow;
+        }
+
+        /**/
+        .field {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .field label {
+            flex:1;
+        }
+
+        .field input {
+            flex:4;
+        }
+
+        .btn-login{
+            padding: 5px 40px;
+            border:none;
+            font-size: 13px;
+            color: white;
+            background-color: blue;
+        }
+
+        /*모바일구간, 768까지
+        
+            1) wrap->100%
+            2) sns-login -> 플랙스방향 세로
+            3) field -> 플랙스방향 세로
+            4) 로그인버튼 -> 100%
+        
+        */
+        @media(max-width:768px){
+
+            .login-wrap{
+                width: 100%;
+            }
+
+            .sns-login{
+                flex-direction: column;
+                
+            }
+
+            .sns-login button{
+                padding: 10px;
+            }
+
+            .field{
+                flex-direction: column;
+            }
+
+            .btn-login{
+                width: 100%;
+                padding: 10px;
+                margin-top: 10px;
+                border-radius: 5px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="login-wrap">
+        <h2>reservation</h2>
+        <!--sns login-->
+        <div class="sns-login">
+            <button class="naver">naver</button>
+            <button class="kakao">kakao</button>
+        </div>
+        <!--field-->
+        <div class="field">
+            <label>name</label>
+            <input type="text">
+        </div>
+
+        <div class="field">
+            <label>e-mail</label>
+            <input type="text">
+        </div>
+
+        <div class="field">
+            <label>password</label>
+            <input type="text">
+        </div>
+        <div><button class="btn-login">login</button></div>
+    </div>
+</body>
+
+</html>
