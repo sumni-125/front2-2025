@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .wrap {
+            width: 950px;
+            /* border: 1px solid black; */
+            margin: 0 auto;
+        }
+
+        .gnb {
+            padding: 20px;
+            /*border: 1px solid black;*/
+            text-align: right;
+            text-align: 13px;
+            font-weight: bold;
+        }
+
+        .gnb a {
+            padding: 5px;
+        }
+
+        .search {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .search input {
+            background-image: url("imgs/search.png");
+            background-repeat: no-repeat;
+            background-size: 20px;
+            background-position: right;
+
+            border: none;
+            outline: none;
+            border-bottom: 0.5px solid #ccc;
+
+            padding: 10px;
+        }
+
+        .search button {
+            border: none;
+            font-size: 20px;
+            padding: 13px 60px;
+            color: white;
+            background-color: rgb(227, 255, 161);
+
+            border-radius: 20px;
+        }
+
+        .search button:hover{
+            background-color: rgb(220, 231, 201);
+        }
+
+        /* item css*/
+        .item-wrap {
+            padding-top: 50px;
+
+            display: flex;
+            flex-direction: row;
+
+            /*border: 1px solid black;*/
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        h5,
+        p {
+            padding: 0;
+            margin: 0;
+        }
+
+        .item {
+            width: 300px;
+            height: 200px;
+            /* border: 1px solid black;
+
+                 */
+            overflow: hidden;
+            position: relative;
+
+            margin-top: 10px;
+        }
+
+        img {
+            width: 300px;
+            height: 200px;
+        }
+
+        .desc {
+            width: 100%;
+            height: 60px;
+            /*border: 1px solid blue;
+
+               부모를기준으로 바닥아래에 위치   */
+            position: absolute;
+            bottom: -60px;
+            left: 0px;
+
+            background-color: white;
+            opacity: 0.5;
+
+            transition: 0.5s;
+        }
+
+        .item:hover .desc {
+            bottom: 0px;
+        }
+        /* 모바일구간 
+
+
+        
+        */
+        @media (max-width: 768px) {
+            .wrap{
+                width: 100%;
+            }
+            .gnb{
+                text-align: center;
+            }
+            .search{
+                flex-direction: column;
+            }
+            .item{
+                width: 100%;
+                height: 100%;
+            }
+            img{
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <!--상단-->
+
+        <div class="header">
+            <div class="gnb">
+                <a href="#none">Photoshop</a>
+                <a href="#none">Illustrator</a>
+                <a href="#none">Publishing</a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button>Designer Profile</button>
+            </div>
+        </div>
+
+        <!--하단-->
+        <div class="item-wrap">
+            <div class="item">
+                <img src="imgs/p1.jpg">
+                <div class="desc">
+                    <h5> title</h5>
+                    <p>300 likes</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="imgs/p2.jpg">
+                <div class="desc">
+                    <h5> title</h5>
+                    <p>300 likes</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="imgs/p3.jpg">
+                <div class="desc">
+                    <h5> title</h5>
+                    <p>300 likes</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="imgs/p4.jpg">
+                <div class="desc">
+                    <h5> title</h5>
+                    <p>300 likes</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="imgs/p5.jpg">
+                <div class="desc">
+                    <h5> title</h5>
+                    <p>300 likes</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="imgs/p6.jpg">
+                <div class="desc">
+                    <h5> title</h5>
+                    <p>300 likes</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="imgs/p7.jpg">
+                <div class="desc">
+                    <h5> title</h5>
+                    <p>300 likes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
